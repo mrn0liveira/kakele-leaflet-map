@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>EXAMPLE MAP</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>
+    <style>html, body {height: 100%;margin: 0;padding: 0;}</style>
+    </head>
+    <body>
+        <div id="myMap" style="width:100%;height:100%"></div>
+        <script type="text/javascript">
+         var map = L.map('myMap', {crs: L.CRS.Simple,minZoom: 1, maxZoom:6, maxNativeZoom:6});
+         var tile = {tileSize: L.point(79, 94)};
+         L.tileLayer('{z}/{x}/{y}.png', tile).addTo(map)
+         map.setView([-40, 47], 6);
+        </script>
+    </body>
+</html>
+        
